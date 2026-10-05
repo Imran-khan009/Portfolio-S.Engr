@@ -1,0 +1,821 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imran Khan — Full-Stack Engineer, AI Solutions Architect &amp; Growth Strategist</title>
+  <meta name="description"
+    content="Imran Khan | Full-Stack Engineer, AI Solutions Architect &amp; Growth Strategist. Specialized in Web &amp; E-Commerce, IoT Systems, Data Analytics, BI, and High-ROI Meta/Google Ads.">
+  <meta property="og:description"
+    content="Full-Stack Web Development, E-Commerce Platforms, AI Agents, IoT Systems, Data Analytics &amp; Business Intelligence, Meta/Google Ads, and Graphic Design by Imran Khan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="stage-locked">
+
+  <!-- Loading Screen Overlay -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <div class="brand-badge-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a4 4 0 0 1 4 4c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2a4 4 0 0 1 4-4z" />
+            <path d="M7 8a4 4 0 0 0-4 4c0 1.8 1.2 3.3 2.9 3.8L6 20h12l.1-4.2C19.8 15.3 21 13.8 21 12a4 4 0 0 0-4-4" />
+            <circle cx="9" cy="13" r="1" fill="currentColor" />
+            <circle cx="15" cy="13" r="1" fill="currentColor" />
+          </svg>
+        </div>
+        <span class="loader-brand-name">IMRAN KHAN</span>
+      </div>
+      <div class="loader-spinner-ring"></div>
+      <div class="loader-text-group">
+        <h2 class="loader-title">LOADING PORTFOLIO</h2>
+        <p class="loader-subtitle">Preparing 240 interactive motion frames</p>
+      </div>
+      <div class="loader-progress-container">
+        <div class="loader-progress-bar" id="loader-progress-bar"></div>
+      </div>
+      <div class="loader-stats">
+        <span id="loader-percent" class="loader-percent">0%</span>
+        <span id="loader-count" class="loader-count">0 / 240</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient Top Scroll Progress Line -->
+  <div class="scroll-progress-line" id="progress-line"></div>
+
+  <!-- Sticky Fullscreen Canvas Background -->
+  <div class="animation-stage">
+    <div class="canvas-wrapper">
+      <!-- Cinematic Vignette & Cyber Grid Overlay -->
+      <div class="cinematic-vignette"></div>
+      <div class="cyber-grid-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Main UI Layer (Over Canvas) -->
+  <div class="portfolio-container">
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar" data-stage-only>
+      <div class="nav-left">
+        <a href="#stage" class="brand-logo" id="brand-logo">
+          <img class="brand-mark" src="assets/ik-engineering-logo.svg" alt="IK, S.Engr Technology and Engineering">
+          <span class="brand-text">IMRAN KHAN</span>
+        </a>
+      </div>
+
+      <nav class="nav-center" id="nav-menu">
+        <a href="#about" class="nav-link" data-section="about" data-view-target="about">ABOUT</a>
+        <a href="#work" class="nav-link" data-section="work" data-view-target="work">WORK</a>
+        <a href="#skills" class="nav-link" data-section="skills" data-view-target="skills">SKILLS</a>
+        <a href="#experience" class="nav-link" data-section="experience" data-view-target="experience">EXPERIENCE</a>
+        <a href="#contact" class="nav-link" data-section="contact" data-view-target="contact">CONTACT</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="#contact" class="btn-connect" id="btn-connect-nav" data-view-target="contact">
+          <span>LET'S CONNECT</span>
+          <svg class="arrow-up-right" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+        <button class="btn-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer" data-stage-only>
+      <div class="mobile-drawer-header">
+        <span class="brand-text">IMRAN KHAN</span>
+        <button class="drawer-close" id="drawer-close" aria-label="Close navigation menu">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="#about" class="mobile-link" data-section="about" data-view-target="about">ABOUT</a>
+        <a href="#work" class="mobile-link" data-section="work" data-view-target="work">WORK</a>
+        <a href="#skills" class="mobile-link" data-section="skills" data-view-target="skills">SKILLS</a>
+        <a href="#experience" class="mobile-link" data-section="experience" data-view-target="experience">EXPERIENCE</a>
+        <a href="#contact" class="mobile-link" data-section="contact" data-view-target="contact">CONTACT</a>
+      </div>
+      <div class="mobile-drawer-footer">
+        <a href="#contact" class="btn-connect w-full" id="btn-connect-mobile" data-view-target="contact">
+          <span>LET'S CONNECT</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Content Layer -->
+    <main class="portfolio-main">
+    <section class="hero-section" id="stage" data-stage-only aria-labelledby="hero-title">
+      <div class="hero-layout">
+
+        <!-- Left Column: Typography & CTAs -->
+        <div class="hero-left-content">
+          <!-- Role Tag -->
+          <div class="hero-tag">
+            <span class="tag-bullet"></span>
+            <span class="tag-text">FULL-STACK · AI SOLUTIONS · GROWTH STRATEGY</span>
+          </div>
+
+          <!-- Main Impact Title -->
+          <h1 class="hero-title" id="hero-title">IMRAN KHAN</h1>
+          <h2 class="hero-impact-headline">
+            I build full-stack, AI, and IoT products
+            <span class="title-highlight">that help businesses grow.</span>
+          </h2>
+
+          <!-- Subtitle Description -->
+          <p class="hero-description">
+            I create websites and e-commerce stores, build AI agents and IoT systems, and use analytics, BI, and paid ads to help ideas find an audience. I also design the visuals that give each project its identity.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#work" class="btn-primary" id="btn-view-work" data-view-target="work">
+              <span>VIEW MY WORK</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                stroke-width="2.2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <a href="resume.html" target="_blank" class="btn-secondary" id="btn-download-resume">
+              <span>DOWNLOAD RESUME</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                stroke-width="2.2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Visual Area: Glowing Halo Ring + Floating Glass Badges -->
+        <div class="hero-right-visual">
+          <canvas id="animation-canvas"></canvas>
+
+          <!-- Cyber Glowing Halo Portal Ring -->
+          <div class="halo-portal-container">
+            <div class="halo-ring halo-ring-outer"></div>
+            <div class="halo-ring halo-ring-core"></div>
+            <div class="halo-glow-radial"></div>
+          </div>
+
+          <div class="experience-orbit" aria-label="Experience and skills">
+          <!-- Floating Badge 1: IoT Specialist (Left of character) -->
+          <div class="floating-badge badge-ai" id="badge-ai" data-tilt>
+            <div class="badge-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+              </svg>
+            </div>
+            <div class="badge-text-group">
+              <span class="badge-title">IoT</span>
+              <span class="badge-sub">Specialist</span>
+            </div>
+            <svg class="badge-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
+
+          <!-- Floating Badge 2: Hardware & Embedded (Top-right of character) -->
+          <div class="floating-badge badge-dev" id="badge-dev" data-tilt>
+            <div class="badge-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="15" x2="23" y2="15"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="15" x2="4" y2="15"></line>
+              </svg>
+            </div>
+            <div class="badge-text-group">
+              <span class="badge-title">Hardware &amp;</span>
+              <span class="badge-sub">Embedded</span>
+            </div>
+            <svg class="badge-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
+
+          <!-- Floating Badge 3: Tech Instructor (Bottom-right of character) -->
+          <div class="floating-badge badge-solver" id="badge-solver" data-tilt>
+            <div class="badge-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="badge-text-group">
+              <span class="badge-title">Tech</span>
+              <span class="badge-sub">Instructor</span>
+            </div>
+            <svg class="badge-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
+
+          <div class="floating-badge skill-orbit-tag skill-graphic" id="badge-graphic" data-tilt>
+            <span>Graphic Design</span>
+          </div>
+
+          <div class="floating-badge skill-orbit-tag skill-marketing" id="badge-marketing" data-tilt>
+            <span>Digital Marketing</span>
+          </div>
+
+          <div class="floating-badge skill-orbit-tag skill-bi" id="badge-bi" data-tilt>
+            <span>Business Intelligence</span>
+          </div>
+
+          <div class="floating-badge skill-orbit-tag skill-analytics" id="badge-analytics" data-tilt>
+            <span>Data Analytics</span>
+          </div>
+
+          <div class="floating-badge skill-orbit-tag skill-web" id="badge-web" data-tilt>
+            <span>Web Design</span>
+          </div>
+
+          <div class="floating-badge skill-orbit-tag skill-portfolio" id="badge-portfolio" data-tilt>
+            <span>Portfolio &amp; CV</span>
+          </div>
+
+          <div class="floating-badge skill-orbit-tag skill-it" id="badge-it" data-tilt>
+            <span>IT Expertise</span>
+          </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Floating Stats Bar -->
+      <section class="stats-glass-bar">
+        <!-- Stat Item 1 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <div class="stat-details">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">YEARS IN TECH</span>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <!-- Stat Item 2 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <span class="stat-code-icon">&lt;/&gt;</span>
+          </div>
+          <div class="stat-details">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">STUDENTS TAUGHT</span>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <!-- Stat Item 3 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="stat-details">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">HARDWARE REPOS</span>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <!-- Stat Item 4 -->
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+          </div>
+          <div class="stat-details">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">HANDS-ON WORK</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Bar: Scroll Indicator & Tech Stack -->
+      <footer class="hero-bottom-bar">
+        <div class="bottom-left-scroll">
+          <div class="scroll-mouse-icon">
+            <div class="mouse-scroll-wheel"></div>
+          </div>
+          <span class="scroll-explore-text">SCROLL TO EXPLORE</span>
+          <div class="scroll-scrub-track">
+            <div class="scroll-scrub-bar" id="bottom-scrub-bar"></div>
+          </div>
+        </div>
+
+        <div class="bottom-right-tech">
+          <span class="tech-label">CORE TECHNOLOGIES</span>
+          <div class="tech-icons-row">
+            <!-- C++ -->
+            <div class="tech-icon-pill" title="C++">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#38bdf8" stroke-width="2">
+                <path d="M10 9a3 3 0 1 0 0 6h1" />
+                <path d="M14 12h2.5M15.2 10.7v2.6" />
+                <path d="M18.5 12h2.5M19.7 10.7v2.6" />
+              </svg>
+            </div>
+            <!-- JavaScript -->
+            <div class="tech-icon-pill" title="JavaScript (ES6+)">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#f7df1e">
+                <rect x="3" y="3" width="18" height="18" rx="3" fill="#f7df1e" />
+                <path
+                  d="M12.5 16.5c.3.5.7.9 1.3.9.7 0 1.1-.4 1.1-1.3v-4.6h1.5v4.7c0 1.7-1 2.5-2.5 2.5-1.3 0-2.1-.7-2.5-1.7l1.1-.5zm-4.7.1c.4.7 1 1.1 1.9 1.1.9 0 1.5-.5 1.5-1.2 0-.8-.6-1.1-1.6-1.5l-.5-.2c-1.5-.6-2.4-1.4-2.4-3 0-1.5 1.2-2.7 3-2.7 1.3 0 2.2.5 2.8 1.6l-1.2.8c-.3-.6-.7-.9-1.5-.9-.7 0-1.2.4-1.2 1 0 .7.5 1 1.4 1.4l.5.2c1.7.7 2.6 1.5 2.6 3.1 0 1.8-1.4 2.8-3.3 2.8-1.8 0-2.8-.9-3.3-2.1l1.3-.6z"
+                  fill="#000" />
+              </svg>
+            </div>
+            <!-- HTML5 / CSS3 -->
+            <div class="tech-icon-pill" title="HTML5 &amp; CSS3">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff6a3d" stroke-width="1.8">
+                <path d="M4 3l1.8 15.5L12 21l6.2-2.5L20 3H4z" />
+                <path d="M8 8h8M7.5 12h8.5M8 16l4 1.2 4-1.2" />
+              </svg>
+            </div>
+            <!-- Arduino -->
+            <div class="tech-icon-pill" title="Arduino Uno / Nano">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#00979c" stroke-width="1.8">
+                <circle cx="8" cy="12" r="5" />
+                <circle cx="16" cy="12" r="5" />
+                <line x1="6.5" y1="12" x2="9.5" y2="12" />
+                <line x1="8" y1="10.5" x2="8" y2="13.5" />
+                <line x1="14.5" y1="12" x2="17.5" y2="12" />
+              </svg>
+            </div>
+            <!-- ESP32 -->
+            <div class="tech-icon-pill" title="ESP32 IoT Controller">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff8b35" stroke-width="1.8">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="8" y="8" width="8" height="8" rx="1" />
+                <line x1="1" y1="9" x2="4" y2="9" />
+                <line x1="1" y1="15" x2="4" y2="15" />
+                <line x1="20" y1="9" x2="23" y2="9" />
+                <line x1="20" y1="15" x2="23" y2="15" />
+                <line x1="9" y1="1" x2="9" y2="4" />
+                <line x1="15" y1="1" x2="15" y2="4" />
+                <line x1="9" y1="20" x2="9" y2="23" />
+                <line x1="15" y1="20" x2="15" y2="23" />
+              </svg>
+            </div>
+            <!-- Python -->
+            <div class="tech-icon-pill" title="Python">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#38bdf8" stroke-width="1.8">
+                <path
+                  d="M12 2c-3.5 0-4 1.5-4 3v2h4v1H6c-2 0-4 1.5-4 4.5S3.5 17 6 17h1v-2c0-1.5 1-3 3-3h4c1.5 0 3-1 3-3V5c0-1.5-1.5-3-5-3h-1z" />
+                <circle cx="9.5" cy="4.5" r=".7" fill="#38bdf8" />
+                <path
+                  d="M12 22c3.5 0 4-1.5 4-3v-2h-4v-1h6c2 0 4-1.5 4-4.5S20.5 7 18 7h-1v2c0 1.5-1 3-3 3h-4c-1.5 0-3 1-3 3v4c0 1.5 1.5 3 5 3h1z" />
+                <circle cx="14.5" cy="19.5" r=".7" fill="#38bdf8" />
+              </svg>
+            </div>
+            <!-- Git -->
+            <div class="tech-icon-pill" title="Git Version Control">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f05032" stroke-width="1.8">
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="9" r="3" />
+                <circle cx="6" cy="6" r="3" />
+                <path d="M6 9v6M9 6h6a3 3 0 0 1 3 3v0" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <section class="content-section about-section view-panel" id="about" data-view-panel hidden aria-hidden="true" aria-labelledby="about-heading">
+      <div class="section-heading">
+        <span class="section-kicker">ABOUT IMRAN</span>
+        <h2 id="about-heading">A multidisciplinary path, <span class="title-highlight">built in practice.</span></h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-summary">
+          <p>A versatile technologist with a six-year journey spanning hands-on IoT engineering, advanced computer training under UNICEF programs, digital marketing and design through Radius Group, and international freelancing.</p>
+          <p>His work connects practical hardware and software with clear instruction: from ESP32 and Arduino sensor systems to troubleshooting labs, digital campaigns, and responsive web experiences.</p>
+        </div>
+        <div class="about-education">
+          <span class="about-label">EDUCATION</span>
+          <article class="about-entry"><h3>BS in Computer Science</h3><p>Lasbela University of Agriculture, Water and Marine Sciences (LUAWMS) <span>· 2020–2024</span></p></article>
+          <article class="about-entry"><h3>Pre-Engineering / Intermediate</h3><p>Govt Degree College Hub <span>· 2019</span></p></article>
+        </div>
+      </div>
+      <div class="about-certifications">
+        <span class="about-label">CERTIFICATIONS &amp; HONORS</span>
+        <div class="certification-list">
+          <span>NAVTTC Advanced Internet of Things</span>
+          <span>Induction Certified (VATT)</span>
+          <span>Programming Essentials in Python</span>
+          <span>NFTP Creative Design Domain</span>
+          <span>Microsoft Learn Student Ambassador</span>
+          <span>Induction Training for Teaching Professionals · Module 6</span>
+          <span>Radius Group Digital Marketing &amp; Design Training</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section skills-section view-panel" id="skills" data-view-panel hidden aria-hidden="true" aria-labelledby="skills-heading">
+      <div class="section-heading">
+        <span class="section-kicker">SERVICES / WHAT I DO</span>
+        <h2 id="skills-heading">Practical skills, <span class="title-highlight">built for real work.</span></h2>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="skill-index">01 / ENGINEERING</span>
+          <h3>Engineering &amp; AI</h3>
+          <ul class="service-tags" aria-label="Engineering and AI services">
+            <li>Full-Stack Web Development</li>
+            <li>E-Commerce Platforms</li>
+            <li>Autonomous AI Agents</li>
+            <li>Vibe Coding</li>
+            <li>IoT &amp; Embedded Systems</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <span class="skill-index">02 / INSIGHT</span>
+          <h3>Data &amp; Business Intelligence</h3>
+          <ul class="service-tags" aria-label="Data and business intelligence services">
+            <li>Data Analytics</li>
+            <li>BI Dashboards</li>
+            <li>Performance Metrics</li>
+            <li>Predictive Insights</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <span class="skill-index">03 / GROWTH</span>
+          <h3>Performance Marketing</h3>
+          <ul class="service-tags" aria-label="Performance marketing services">
+            <li>Meta Ads</li>
+            <li>Google Ads Campaign Management</li>
+            <li>Funnel Strategy</li>
+            <li>Conversion Optimization</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <span class="skill-index">04 / CREATIVE</span>
+          <h3>Creative &amp; Graphic Design</h3>
+          <ul class="service-tags" aria-label="Creative and graphic design services">
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>2D / 3D Brand Assets</li>
+            <li>Commercial Ad Creatives</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section experience-section view-panel" id="experience" data-view-panel hidden aria-hidden="true" aria-labelledby="experience-heading">
+      <div class="section-heading">
+        <span class="section-kicker">2017 — PRESENT</span>
+        <h2 id="experience-heading">A journey built on <span class="title-highlight">doing.</span></h2>
+      </div>
+      <div class="experience-filters" role="group" aria-label="Filter work experience">
+        <button type="button" class="experience-filter active" data-experience-filter="all" aria-pressed="true">All Experience</button>
+        <button type="button" class="experience-filter" data-experience-filter="technical" aria-pressed="false">Technical &amp; IoT Instruction</button>
+        <button type="button" class="experience-filter" data-experience-filter="freelance" aria-pressed="false">Freelance &amp; Digital Agency</button>
+        <button type="button" class="experience-filter" data-experience-filter="engineering" aria-pressed="false">Engineering &amp; Design</button>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-card" data-experience-category="technical">
+          <div class="experience-card-top">
+            <span class="experience-type">TECHNICAL INSTRUCTION</span>
+            <span class="experience-date">JAN 2025 — PRESENT</span>
+          </div>
+          <h3>IoT Instructor</h3>
+          <p class="experience-organization">ALP Centre (UNICEF) <span>·</span> Hub</p>
+          <p>Delivered intensive practical sessions on ESP32, Arduino Uno/Nano, sensor arrays, automation circuits, and robotics.</p>
+          <div class="experience-badges"><span>Induction Certified (VATT)</span><span>UNICEF Program</span></div>
+        </article>
+        <article class="experience-card" data-experience-category="technical">
+          <div class="experience-card-top">
+            <span class="experience-type">COMPUTER TRAINING</span>
+            <span class="experience-date">APR 2025 — PRESENT</span>
+          </div>
+          <h3>Advanced Computer Operator Instructor</h3>
+          <p class="experience-organization">GBHS (UNICEF) <span>·</span> Hub</p>
+          <p>Conducted advanced computer operations, operating system diagnostics, troubleshooting labs, and workplace productivity workflows.</p>
+          <div class="experience-badges"><span>UNICEF Program</span><span>Practical Labs</span></div>
+        </article>
+        <article class="experience-card" data-experience-category="freelance">
+          <div class="experience-card-top">
+            <span class="experience-type">FREELANCE &amp; DIGITAL AGENCY</span>
+            <span class="experience-date">2023 — PRESENT</span>
+          </div>
+          <h3>Freelance Digital Marketer &amp; Graphic Designer</h3>
+          <p class="experience-organization">Fiverr, Upwork &amp; Direct Clients</p>
+          <p>Certified via Radius Group. Formulated digital ad campaigns, social growth plans, and 2D/3D creative brand assets for commercial clients.</p>
+          <div class="experience-badges"><span>Radius Group Certified</span><span>International Freelancing</span></div>
+        </article>
+        <article class="experience-card" data-experience-category="engineering">
+          <div class="experience-card-top">
+            <span class="experience-type">ENGINEERING &amp; DESIGN</span>
+            <span class="experience-date">2017 — 2020</span>
+          </div>
+          <h3>Field Assistant Engineer &amp; CAD Practice</h3>
+          <p class="experience-organization">M. Rahim &amp; Sons</p>
+          <p>Managed structural inspection, technical layout plans, material quality control, and contractor coordination.</p>
+          <div class="experience-badges"><span>Field Engineering</span><span>CAD Practice</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section projects-section view-panel" id="work" data-view-panel hidden aria-hidden="true" aria-labelledby="projects-heading">
+      <div class="section-heading section-heading-row">
+        <div>
+          <span class="section-kicker">SELECTED PRACTICAL WORK</span>
+          <h2 id="projects-heading">Work &amp; <span class="title-highlight">Repositories</span></h2>
+        </div>
+        <a class="section-profile-link" href="https://github.com/Imran-khan009" target="_blank" rel="noopener noreferrer">
+          GitHub profile <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card project-showcase-card">
+          <div class="project-visual visual-agriculture" aria-label="Illustrative system flow diagram">
+            <span class="visual-caption">SYSTEM FLOW / CONCEPT</span>
+            <div class="flow-diagram"><span>SOIL<br>SENSOR</span><i></i><span>ESP32</span><i></i><span>RELAY<br>PUMP</span></div>
+            <div class="visual-readout">MOISTURE <b>42%</b><span>·</span> IRRIGATION <b>AUTO</b></div>
+          </div>
+          <div class="project-body">
+            <div class="project-header"><span class="project-badge">IoT / AUTOMATION</span><span class="project-year">01</span></div>
+            <h3 class="project-title">Smart Agriculture Water Management System</h3>
+            <p class="project-desc">Automated moisture sensing and closed-loop relay irrigation using microcontrollers.</p>
+            <div class="project-tags"><span>ESP32 / Arduino</span><span>C++</span><span>Sensor Interfacing</span></div>
+            <a href="https://github.com/Imran-khan009" target="_blank" rel="noopener noreferrer" class="project-link"><span>View GitHub Repo</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="project-card project-showcase-card">
+          <div class="project-visual visual-robot" aria-label="Illustrative wireless robotics diagram">
+            <span class="visual-caption">CONTROL LINK / CONCEPT</span>
+            <div class="robot-diagram"><span class="signal-node">RF<br>REMOTE</span><i></i><span class="board-node">RX<br>CONTROL</span><i></i><span class="wheel-node">MOTOR<br>DRIVER</span></div>
+            <div class="visual-readout">SIGNAL <b>2.4 GHz</b><span>·</span> DRIVE <b>DUAL</b></div>
+          </div>
+          <div class="project-body">
+            <div class="project-header"><span class="project-badge">ROBOTICS / HARDWARE</span><span class="project-year">02</span></div>
+            <h3 class="project-title">RF Wireless Robotic Vehicle</h3>
+            <p class="project-desc">Motor driver integration with wireless RF remote control communication.</p>
+            <div class="project-tags"><span>C++</span><span>Hardware Schematics</span><span>Motor Drivers</span></div>
+            <a href="https://github.com/Imran-khan009" target="_blank" rel="noopener noreferrer" class="project-link"><span>View GitHub Repo</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="project-card project-showcase-card">
+          <div class="project-visual visual-web" aria-label="Illustrative web interface code diagram">
+            <span class="visual-caption">RESPONSIVE INTERFACE / CONCEPT</span>
+            <div class="code-window"><div><b></b><b></b><b></b><span>interface.js</span></div><pre><i>&lt;section</i> class=<em>"work"</em><i>&gt;</i>
+  <i>&lt;h1&gt;</i>Ideas to impact<i>&lt;/h1&gt;</i>
+  <i>&lt;button</i> data-action=<em>"build"</em><i>&gt;</i>
+<strong>  responsive · accessible · clear</strong></pre></div>
+          </div>
+          <div class="project-body">
+            <div class="project-header"><span class="project-badge">WEB / INTERACTION</span><span class="project-year">03</span></div>
+            <h3 class="project-title">Modern Interactive Web Interfaces</h3>
+            <p class="project-desc">Scalable, responsive UI architectures built with clean DOM logic and modern CSS.</p>
+            <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+            <div class="project-actions"><span class="project-link is-pending" aria-disabled="true">Live Demo <span>Pending</span><span aria-hidden="true">↗</span></span><a href="https://github.com/Imran-khan009" target="_blank" rel="noopener noreferrer" class="project-link"><span>GitHub</span><span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project-card project-showcase-card">
+          <div class="project-visual visual-brand" aria-label="Illustrative brand campaign layout">
+            <span class="visual-caption">CAMPAIGN SYSTEM / CONCEPT</span>
+            <div class="brand-board"><span class="brand-stamp">R</span><div><b>MAKE<br>IT MATTER.</b><small>CAMPAIGN / 01</small></div><span class="brand-shape"></span></div>
+            <div class="visual-readout">SOCIAL <b>CAMPAIGNS</b><span>·</span> IDENTITY <b>DESIGN</b></div>
+          </div>
+          <div class="project-body">
+            <div class="project-header"><span class="project-badge">DIGITAL / CREATIVE</span><span class="project-year">04</span></div>
+            <h3 class="project-title">Digital Marketing &amp; Brand Design Showcase</h3>
+            <p class="project-desc">Multi-platform social marketing assets, templates, and high-conversion ad creatives built through Radius Group training.</p>
+            <div class="project-tags"><span>Creative Design</span><span>Social Campaign Strategy</span><span>Brand Identity</span></div>
+            <span class="project-link is-pending" aria-disabled="true">View Portfolio / Drive <span>Pending</span><span aria-hidden="true">↗</span></span>
+          </div>
+        </article>
+      </div>
+
+      <div class="archive-wrap">
+        <button class="archive-toggle" id="archive-toggle" type="button" aria-expanded="false" aria-controls="archive-panel">
+          <span>Explore Full GitHub &amp; Project Archive</span><span class="archive-chevron" aria-hidden="true">+</span>
+        </button>
+        <div class="archive-panel" id="archive-panel" hidden>
+          <div class="archive-row"><div><span class="archive-kind">REPOSITORIES</span><h3>GitHub hardware &amp; web repository archive</h3></div><a href="https://github.com/Imran-khan009" target="_blank" rel="noopener noreferrer" class="archive-action">Open GitHub <span aria-hidden="true">↗</span></a></div>
+          <div class="archive-row"><div><span class="archive-kind">VIDEO DEMONSTRATIONS</span><h3>Project walkthroughs and build demonstrations</h3></div><span class="archive-pending">Link pending <span aria-hidden="true">↗</span></span></div>
+          <div class="archive-row"><div><span class="archive-kind">STUDENT PRACTICAL LABS</span><h3>IoT, robotics and computer training sessions</h3></div><span class="archive-pending">Link pending <span aria-hidden="true">↗</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section contact-section view-panel" id="contact" data-view-panel hidden aria-hidden="true" aria-labelledby="contact-heading">
+      <div class="contact-intro">
+        <span class="section-kicker">LET'S WORK TOGETHER</span>
+        <h2 id="contact-heading">Build something <span class="title-highlight">meaningful.</span></h2>
+        <p>For IoT projects, practical training, digital campaigns, or creative work, choose the channel that suits you.</p>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-field"><label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" required></div>
+        <div class="form-field"><label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="form-field form-field-wide"><label for="contact-message">Project or message</label><textarea id="contact-message" name="message" rows="4" required></textarea></div>
+        <button class="btn-primary" type="submit">Compose Email <span aria-hidden="true">↗</span></button>
+      </form>
+      <div class="social-grid">
+        <a class="social-link" href="https://www.fiverr.com/imran_khan1327/buying?source=avatar_menu_profile" target="_blank" rel="noopener noreferrer"><span class="social-mark">F</span><span>Fiverr</span><b aria-hidden="true">↗</b></a>
+        <a class="social-link" href="https://www.upwork.com/freelancers/~01f2c597f17b5cc580" target="_blank" rel="noopener noreferrer"><span class="social-mark">U</span><span>Upwork</span><b aria-hidden="true">↗</b></a>
+        <a class="social-link" href="https://github.com/Imran-khan009" target="_blank" rel="noopener noreferrer"><span class="social-mark">GH</span><span>GitHub</span><b aria-hidden="true">↗</b></a>
+        <a class="social-link" href="https://www.linkedin.com/in/imran-khan-b7299833a/" target="_blank" rel="noopener noreferrer"><span class="social-mark">in</span><span>LinkedIn</span><b aria-hidden="true">↗</b></a>
+        <a class="social-link" href="https://web.facebook.com/heyultra" target="_blank" rel="noopener noreferrer"><span class="social-mark">f</span><span>Facebook</span><b aria-hidden="true">↗</b></a>
+        <a class="social-link" href="https://www.instagram.com/s_evers13/" target="_blank" rel="noopener noreferrer"><span class="social-mark">◎</span><span>Instagram</span><b aria-hidden="true">↗</b></a>
+        <a class="social-link" href="https://wa.me/923331244214" target="_blank" rel="noopener noreferrer"><span class="social-mark">WA</span><span>WhatsApp</span><b aria-hidden="true">↗</b></a>
+        <a class="social-link" href="mailto:s.engrimrantareen@gmail.com"><span class="social-mark">@</span><span>Email</span><b aria-hidden="true">↗</b></a>
+      </div>
+      <footer class="site-footer"><span>IMRAN KHAN · IoT ENGINEER &amp; DIGITAL STRATEGIST</span><a href="#stage" data-close-view>Back to Stage ↑</a></footer>
+    </section>
+    </main>
+    <button class="view-close" id="view-close" type="button" aria-label="Back to Stage" hidden>
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/><path d="M9 12h12"/></svg>
+      <span>Back to Stage</span>
+    </button>
+  </div>
+
+  <!-- Interactive Project Showcase Modal (Opens on 'View My Work' / Nav) -->
+  <div class="portfolio-modal" id="work-modal">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow">PORTFOLIO SHOWCASE</span>
+          <h2 class="modal-title">Featured Projects</h2>
+        </div>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge">IoT &amp; Smart Farming</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">Agriculture Smart Water Management System</h3>
+          <p class="project-desc">An automated irrigation and soil moisture monitoring setup using embedded sensors and microcontrollers to optimize water usage.</p>
+          <div class="project-tags">
+            <span>Arduino/ESP32</span>
+            <span>Soil Moisture Sensors</span>
+            <span>C++</span>
+          </div>
+          <a href="https://github.com/Imran-khan009" class="project-link">
+            <span>Explore Case Study</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge">Robotics &amp; Hardware</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">RF Remote Controlled Robo Car</h3>
+          <p class="project-desc">A custom-built motor-driven robotic vehicle controlled via wireless RF signals, featuring integrated motor driver ICs and chassis wiring.</p>
+          <div class="project-tags">
+            <span>Microcontrollers</span>
+            <span>RF Transceivers</span>
+            <span>Motor Drivers</span>
+            <span>C++</span>
+          </div>
+          <a href="https://github.com/Imran-khan009" class="project-link">
+            <span>Explore Case Study</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge">Web Development</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-title">Front-End Interactive Web Interfaces</h3>
+          <p class="project-desc">Responsive, modern UI designs engineered with clean HTML, CSS, and interactive JavaScript logic.</p>
+          <div class="project-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="https://github.com/Imran-khan009" class="project-link">
+            <span>Explore Case Study</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Connect Modal -->
+  <div class="portfolio-modal" id="connect-modal">
+    <div class="modal-backdrop" id="connect-backdrop"></div>
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow">GET IN TOUCH</span>
+          <h2 class="modal-title">Let's Build Something Great</h2>
+        </div>
+        <button class="modal-close" id="connect-close">&times;</button>
+      </div>
+      <div class="connect-info-list">
+        <a href="mailto:s.engrimrantareen@gmail.com" class="connect-item">
+          <div class="connect-item-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div class="connect-item-text">
+            <span class="connect-label">Email Me</span>
+            <span class="connect-val">s.engrimrantareen@gmail.com</span>
+          </div>
+        </a>
+
+        <a href="https://wa.me/923331244214" class="connect-item" target="_blank" rel="noopener noreferrer">
+          <div class="connect-item-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="connect-item-text">
+            <span class="connect-label">WhatsApp</span>
+            <span class="connect-val">+92 333 1244214</span>
+          </div>
+        </a>
+
+        <div class="connect-item">
+          <div class="connect-item-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="connect-item-text">
+            <span class="connect-label">Location</span>
+            <span class="connect-val">Hub Chowki, Balochistan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
